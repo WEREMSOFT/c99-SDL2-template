@@ -48,9 +48,9 @@ EMSC_CC_COMMAND := $(EMSC_CC) $(EMSC_CFLAGS) $(INCLUDE_D) $(STATIC_LIBS_D)
 #//////////////////////////////////////////////////
 
 ifeq ($(DETTECTED_OS),Linux)
-	LINK_LIBS :=
 	TEST_LINK_LIBS := -lunity 
-	#LINK_LIBS := -l:libraylib-linux.a -l:libglfw3.a -lm -ldl -lpthread -lX11 -lxcb -lGL -lGLX -lXext -lGLdispatch -lXau -lXdmcp
+	LINK_LIBS := -l:libSDL2.a -lm -ldl -lpthread -lX11 -lxcb -lGL -lGLX -lXext -lGLdispatch -lXau -lXdmcp
+	#-l:libglfw3.a
 else ifeq ($(DETTECTED_OS),Darwin)
 	LINK_LIBS := 
 	#LINK_LIBS := -O0 -framework IOKit -v -lraylib -framework OpenGL -framework cocoa 
